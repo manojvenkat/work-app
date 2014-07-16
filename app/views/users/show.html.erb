@@ -1,0 +1,23 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @user.name %>
+      </h1>
+
+    <div class="row">
+	 	<div class="span6 offset3">
+	    	<%= form_for(:groups, url: '') do |f| %>
+
+	      	<%= f.label :group_title %>
+	      	<%= f.text_field :group_title %>
+
+	    	<%= f.submit "Create group", class: "btn btn-large btn-primary" %>	    
+			<% end %>
+		</div>
+	</div>
+
+    </section>
+  </aside>
+</div>
